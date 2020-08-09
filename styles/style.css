@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Antic Slab', serif;
+    position: relative;
+}
+
+.container {
+    max-width: 100%;
+    width: 100%;
+    display: table;
+}
+
+.header-part {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, .7);
+}
+
+.brand {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 3.5rem;
+}
+
+.nav-parent {
+    list-style: none;
+    display: flex;
+    margin-top: 1rem;
+}
+
+.nav-parent li a {
+    text-decoration: none;
+    color: #eee;
+    padding: 8px 12px;
+    margin: 0px 5px;
+}
+
+.nav-parent li a:hover {
+    color: rgb(248, 115, 26);
+}
+
+.form-container, .note-list {
+    max-width: calc(100% / 2 - 1rem);
+    width: 100%;
+    float: right;
+    padding: 0rem 2rem;
+    background-color: #fff;
+}
+
+.note-list {
+    margin-top: 1rem;
+    padding: 0 .8rem;
+    height: 80vh;
+    overflow: auto;
+}
+
+.form-itself {
+    padding: 10px;
+}
+
+.form-title, .notebox-title{
+    padding: .5rem 0;
+}
+
+.text-input {
+    width: 100%;
+    padding: 5px 10px;
+    border: 2px solid rgb(248, 115, 26);
+    border-radius: 4px;
+    font-weight: 600;
+    line-height: 1.2rem;
+}
+
+.add-btn {
+    float: right;
+    padding: .5rem 1rem;
+    border: 2px solid rgb(248, 115, 26);
+    background: rgb(226, 98, 13);
+    color: #fff;
+    font-weight: 600;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background-color: rgb(248, 115, 26);
+}
+
+.search-list {
+    width: 100%;
+    padding: .5rem;
+    margin-bottom: 0.5rem;
+    border: 2px solid rgb(248, 115, 26);
+    border-radius: 4px;
+    font-weight: 600;
+}
+.notebox-title, .search-list {
+    position: sticky;
+    z-index: 9999;
+    background: #fff;
+}
+.notebox-title {top: .1rem;}
+.search-list {top: 2.5rem;}
+.note-listing {
+    padding: .2rem 0;
+    display: table;
+    content: "";
+    clear: both;
+    width: 100%;
+}
+
+.note-single {
+    width: calc( 100% / 2 - 1rem);
+    height: auto;
+    display: block;
+    float: left;
+    padding: .5rem;
+    box-shadow: 0px 0px 4px gray;
+    border-radius: 5px;
+    margin: .2rem .45rem;
+}
+
+.timestamp {
+    float: right;
+    font-size: .7rem;
+    font-weight: 600;
+    display: block;
+}
+
+.note-text-single {
+    padding: 1rem 0;
+    display: block;
+}
+
+.remove-btn {
+    background: rgb(243, 45, 10);
+    border: 2px solid rgb(248, 115, 26);
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 600;
+    float: right;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    background: rgb(248, 115, 26);
+}
+
+.no-notes {
+    color: red;
+    font-weight: 600;
+}
+
+
+@media screen and (max-width:768px) {
+    .note-single {
+        width: calc( 100% - 1rem);
+    }
+}
+
+
+@media screen and (max-width:578px) {
+    .form-container, .note-list {
+        max-width: calc(100% - 1rem);
+        float: left;
+    }
+    .note-list {
+        padding: 0rem 2.7rem;
+    }
+    .brand {
+        font-size: 2rem;
+    }
+    .header-part {
+        display: block;
+    }
+    .nav-parent li a{
+        padding: 0px;
+        margin: 0px 13px;
+    }
+}
