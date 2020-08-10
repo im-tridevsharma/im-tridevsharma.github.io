@@ -1,7 +1,7 @@
 
 //chat control
 localStorage.setItem("user","dummy");
-let allowed_users = ["juhi","tridev"];
+let allowed_users = ["honey","sugar"];
 document.getElementsByClassName('form-con')[0].style.display = "none";
 function login() {
   let nuser = prompt("Who are you?");
