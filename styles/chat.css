@@ -22,7 +22,7 @@ header {
 }
 .messages {
   margin-top: 2rem;
-  height: 55vh;
+  height: 50vh;
   overflow: auto;
 }
 
@@ -61,7 +61,7 @@ p.removed {
   width:100%;
   outline:none;
 }
-
+input{outline:none;}
 .btn {
   position: fixed;
   right: 3rem;
