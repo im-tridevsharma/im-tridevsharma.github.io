@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&family=Oxygen&display=swap');
+
+* {
+  margin: 0;
+}
+body {
+  background: white; /* try type yellow */
+  font-family: 'Oxygen', sans-serif;
+}
+
+header {
+  padding: 1rem 2rem;
+  background:#F8094D;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color:#fff;
+  text-decoration: none;
+  font-family: 'Sriracha', cursive;
+}
+.messages {
+  margin-top: 2rem;
+  height: 70vh;
+  overflow: auto;
+}
+
+p {
+  display: block;
+  padding: .2rem .5rem;
+  border-left:.2rem solid transparent;
+}
+
+p:hover {
+  background: #EDE8E9;
+}
+p.removed {
+  background: #EDE8E9;
+  color: gray;
+}
+.self {
+  border-color: dodgerblue;
+}
+.other {
+  border-color: #F8094D;
+}
+
+.send-con {
+  position: fixed;
+  bottom: 1rem;
+  left: 0;
+  padding: 1rem 1rem;
+}
+
+.send-con #msg {
+  padding: 1rem 2rem;
+  background: #EDE8E9;
+  border: none;
+  border-radius: 2rem;
+  width:100%;
+}
+
+.btn {
+  position: fixed;
+  right: 3rem;
+  bottom: 2.5rem;
+  background: #F11B59;
+  color:#fff;
+  border:1px solid #F11B59;
+  padding: .5rem 1rem;
+  outline: none;
+  border-radius: 3rem;
+  cursor: pointer;
+}
+
+.fa-trash {
+  color:red;
+  float: right;
+  font-size: .9rem;
+  cursor: pointer;
+}
+
+.login {
+  float: right;
+  color:#fff;
+  text-decoration: none;
+  margin-top: .3rem;
+}
