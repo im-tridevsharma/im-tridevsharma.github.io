@@ -55,20 +55,16 @@ function init() {
         }
         list.innerHTML += html;
     });
-
-    function removeMe(self) {
-      let id = self.getAttribute("data-id");
-      firebase.database().ref("messages").child(id).remove();
-    }
-
-    firebase.database().ref("messages").on("child_removed", (data) => {
-      let removed = document.getElementById("id"+data.key);
-      removed.innerHTML = "This message has been removed.";
-      removed.parentNode.classList.add("removed");
-    });
-
   }
 }
-
+function removeMe(self) {
+  let id = self.getAttribute("data-id");
+  firebase.database().ref("messages").child(id).remove();
+}
+firebase.database().ref("messages").on("child_removed", (data) => {
+  let removed = document.getElementById("id"+data.key);
+  removed.innerHTML = "This message has been removed.";
+  removed.parentNode.classList.add("removed");
+});
 init();
 
