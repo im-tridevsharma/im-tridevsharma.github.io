@@ -55,7 +55,7 @@ function init() {
           html += "<i class='fas fa-trash' data-id='"+data.key+"' onclick='removeMe(this)'></i></p>";
         }
         list.innerHTML += html;
-        document.getElementById('show').scrollTo(100,document.getElementById('show').innerHeight + 100)
+        document.getElementById('show').scrollTo(100,document.getElementById('show').scrollHeight + 100)
     });
   }
 }
