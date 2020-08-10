@@ -34,6 +34,7 @@ function init() {
                 });
             }
             messageInput.value = "";
+            messageInput.focus();
         }
 
         return false;
