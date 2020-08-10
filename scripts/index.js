@@ -1,5 +1,5 @@
 //pure js app to write our notes
-import {html, deleteIt} from './html-elements.js';
+import {html} from './html-elements.js';
 
 const styleFile = './styles/style.css';
 const fontawesome = 'https://kit.fontawesome.com/4a0859cac2.js';
@@ -87,4 +87,6 @@ searchList.addEventListener("keyup", () => {
     });
 });
 
-
+let delScript = document.createElement("script");
+delScript.setAttribute("src", "./scripts/del-script.js");
+document.body.appendChild(delScript);
