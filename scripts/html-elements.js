@@ -18,15 +18,19 @@ let completeHtml = () => {
     //nav items
     let navItemParent = document.createElement('ul');
     navItemParent.classList.add('nav-parent');
-    let navTexts = ["Home","Fav Notes", "Deleted"];
+    let navTexts = ["Home","Fav Notes", "Chat"];
 
     for( let i=0; i<navTexts.length ; i++ ) {
         let li = document.createElement('li');
         li.classList.add('nav-item');
         let a = document.createElement('a');
         a.classList.add('nav-link');
+        if(navTexts[i].toLowerCase()=='chat'){
+            a.href = "../chat.html";
+        }else{
+            a.href = "javascipt:;";
+        }
         a.setAttribute('data-rule',navTexts[i].toLowerCase());
-        a.href = "javascipt:;";
         a.innerText = navTexts[i];
         navItemParent.appendChild(li).appendChild(a);
     }
