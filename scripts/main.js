@@ -44,6 +44,8 @@ function init() {
         let color = "";
         if(user!==null && user===data.val().sender){
           color = "self";
+        }else{
+          color = "other"; 
         }
         let list = document.getElementById('show');
         let html = "<p class="+color+"><b>"+data.val().sender+"</b> :";
