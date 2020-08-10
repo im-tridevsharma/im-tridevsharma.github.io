@@ -137,4 +137,4 @@ let completeHtml = () => {
 
 const html = completeHtml;
 
-export {html, deleteIt};
+export {html};
