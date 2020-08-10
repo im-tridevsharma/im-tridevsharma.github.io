@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4a0859cac2.js"></script>
+    <link href="./styles/chat.css" rel="stylesheet" />
+    <title>Love Chat</title>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <a href="javascript:;" class="brand">Love Chat</a>
+            <a class="login" href="javascript:;" onclick="login();">Login</a>
+        </header>
+        <div class="form-con">
+            <form method="POST" id="chatform">
+                <div class="messages" id="show">
+                    
+                </div>
+                <div class="send-con">
+                    <input 
+                    type="text" 
+                    id="msg" 
+                    placeholder="Send something romantic..."
+                    class="msend">
+                    <button type="submit" class="btn">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-analytics.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyC4N-uzGyJc20SD8XiXx13iAv5NqH3jXz0",
+        authDomain: "chat-app-fbd18.firebaseapp.com",
+        databaseURL: "https://chat-app-fbd18.firebaseio.com",
+        projectId: "chat-app-fbd18",
+        storageBucket: "chat-app-fbd18.appspot.com",
+        messagingSenderId: "916554963820",
+        appId: "1:916554963820:web:04cf7c34263983d647f149",
+        measurementId: "G-HB4CSJZZKB"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    </script>    
+    <!-- <script src="./scripts/main.js"></script> -->
+</body>
+</html>
