@@ -32,7 +32,7 @@ p {
   border-left:.2rem solid transparent;
 }
 
-p.hover {
+p:hover {
   background: #EDE8E9;
 }
 p.removed {
