@@ -1,4 +1,3 @@
-
 //chat control
 localStorage.setItem("user","dummy");
 let allowed_users = ["honey","sugar"];
@@ -15,7 +14,7 @@ function init() {
   let user = localStorage.getItem("user");
   if(allowed_users.indexOf(user.toLowerCase()) !== -1){
 
-    document.getElementsByClassName('form-con')[0].style.display = "block";
+  document.getElementsByClassName('form-con')[0].style.display = "block";
    
    let chatform = document.getElementById('chatform');
     chatform.onsubmit = (event) => {
@@ -30,7 +29,8 @@ function init() {
             if(message !== ''){
                 firebase.database().ref("messages").push().set({
                     "sender" : user,
-                    "message": message
+                    "message": message,
+                    "sent" : new Date().toLocaleString()
                 });
             }
             messageInput.value = "";
@@ -49,13 +49,13 @@ function init() {
           color = "other"; 
         }
         let list = document.getElementById('show');
-        let html = "<p class="+color+"><b>"+data.val().sender+"</b> :";
+        let html = "<p class="+color+"><span class='sent'>"+data.val().sent+"</span><b>"+data.val().sender+"</b> :";
         html += "<i id='id"+data.key+"'>"+data.val().message+"</i>";
         if(user!==null && user===data.val().sender){
           html += "<i class='fas fa-trash' data-id='"+data.key+"' onclick='removeMe(this)'></i></p>";
         }
         list.innerHTML += html;
-        document.getElementById('show').scrollTo(100,document.getElementById('show').scrollHeight + 100)
+        document.getElementById('show').scrollTo(100,document.getElementById('show').scrollHeight + 100);
     });
   }
 }
@@ -69,4 +69,3 @@ firebase.database().ref("messages").on("child_removed", (data) => {
   removed.parentNode.classList.add("removed");
 });
 init();
-
