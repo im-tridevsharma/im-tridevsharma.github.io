@@ -12,7 +12,13 @@ header {
   padding: 1rem 2rem;
   background:#F8094D;
 }
-
+.partner,.me{
+  width:30px;
+  position: absolute;
+  left: 0;
+  bottom:100px;
+  display: none;
+}
 .brand {
   font-weight: 700;
   font-size: 1.2rem;
@@ -32,7 +38,7 @@ p {
   border-left:.2rem solid transparent;
 }
 
-p:hover {
+p.hover {
   background: #EDE8E9;
 }
 p.removed {
