@@ -43,6 +43,16 @@ function init() {
     firebase.database().ref("messages").on("child_added", (data) => {
         let user = localStorage.getItem("user");
         let color = "";
+
+        let messageInput = document.getElementById('msg');
+        messageInput.onkeyup = () => {
+          if(user==data.val().sender){
+            document.getElementsByClassName('partner')[0].style.display = 'block';
+          }else{
+            document.getElementsByClassName('me')[0].style.display = 'block';
+          }
+        }
+
         if(user!==null && user===data.val().sender){
           color = "self";
         }else{
@@ -59,6 +69,7 @@ function init() {
     });
   }
 }
+
 function removeMe(self) {
   let id = self.getAttribute("data-id");
   firebase.database().ref("messages").child(id).remove();
