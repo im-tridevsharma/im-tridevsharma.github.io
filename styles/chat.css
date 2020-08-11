@@ -2,10 +2,10 @@
 
 * {
   margin: 0;
+  font-family: 'Oxygen', sans-serif;
 }
 body {
   background: white; /* try type yellow */
-  font-family: 'Oxygen', sans-serif;
 }
 
 header {
@@ -32,7 +32,7 @@ p {
   border-left:.2rem solid transparent;
 }
 
-p:hover {
+p.hover {
   background: #EDE8E9;
 }
 p.removed {
@@ -45,7 +45,11 @@ p.removed {
 .other {
   border-color: #F8094D;
 }
-
+.sent{
+  font-size: .6rem;
+  display: block;
+  font-weight:600;
+}
 .send-con {
   position: fixed;
   bottom: 1rem;
