@@ -185,3 +185,107 @@
         margin: 0px 13px;
     }
 }
+
+
+
+
+@font-face {
+    font-family: header;
+    src: url(Moonhouse-yE5M.ttf);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    transition: all .3s ease;   
+}
+
+body {
+    overflow: hidden;
+}
+
+.gameContainer {
+    background-image: url(bg.png);
+    width: 100%;
+    height: 100vh;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+}
+
+.gameOver, .brand, .gameScore{
+    font-weight: 600;
+    font-size: 2rem;
+    color: #fff;
+    padding: .2rem 1rem;
+    font-family: header;
+}
+
+.gameOver {
+    visibility: hidden;
+    animation: blink .6s linear infinite;
+}
+
+.dragon,.obstacle {
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    bottom: 17rem;
+}
+
+.dragon {
+    background-image: url(dino.png);
+    width: 212px;
+    height: 130px;
+    left: 55px;
+}
+.obstacle {
+    background-image: url(obstacle.png);
+    width: 180px;
+    height: 110px;
+    left: 35vw;
+    bottom: 15rem;
+}
+
+.obstacleRun {
+    animation: obsRun 5s linear infinite;
+    transition: animation-duration .3s ease;
+}
+
+.animateDino {
+    animation: animate .6s linear;
+}
+
+@keyframes animate {
+    0%{
+        bottom: 17rem;
+    }
+    50%{
+        bottom: 27rem;
+    }
+    100%{
+        bottom: 17rem;
+    }
+}
+
+@keyframes obsRun {
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
+
+@keyframes blink {
+    from{
+        opacity: 0;
+        color:#fff;
+    }
+    to{
+        opacity: 1;
+        color: red;
+    }
+}
