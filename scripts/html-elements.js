@@ -27,7 +27,7 @@ let completeHtml = () => {
         a.classList.add('nav-link');
         if(navTexts[i].toLowerCase()=='chat'){
             a.href = "../chat.html";
-        }if(navTexts[i].toLowerCase()=='jsGame'){
+        }else if(navTexts[i].toLowerCase()=='jsGame'){
             a.href = "../jsgame.html";
         }else{
             a.href = "javascipt:;";
