@@ -18,7 +18,7 @@ let completeHtml = () => {
     //nav items
     let navItemParent = document.createElement('ul');
     navItemParent.classList.add('nav-parent');
-    let navTexts = ["Home","Fav Notes", "Chat"];
+    let navTexts = ["Home","Fav Notes", "Chat","jsGame"];
 
     for( let i=0; i<navTexts.length ; i++ ) {
         let li = document.createElement('li');
@@ -27,6 +27,8 @@ let completeHtml = () => {
         a.classList.add('nav-link');
         if(navTexts[i].toLowerCase()=='chat'){
             a.href = "../chat.html";
+        }if(navTexts[i].toLowerCase()=='jsGame'){
+            a.href = "../jsgame.html";
         }else{
             a.href = "javascipt:;";
         }
